@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-Archive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="book-name" type="text" class="form-control" placeholder="Enter your Book Name">
+                <div class="input-group-append">
+                    <button onclick="searchBooks()" type="button" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </form>
+        <!-- Card -->
+        <div id="books" class="row row-cols-1 row-cols-md-3 g-4">
+
+
+        </div>
+    </div>
+    <!-- No result -->
+    <div id="not-found">
+
+    </div>
+    <script src="script.js "></script>
+</body>
+
+</html>
