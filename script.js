@@ -2,7 +2,7 @@ const searchBooks = () => {
     const bookName = document.getElementById('book-name');
     const searchBooks = bookName.value;
     bookName.value = ""
-    const url = `http://openlibrary.org/search.json?q=${searchBooks}`;
+    const url = `https://openlibrary.org/search.json?q=${searchBooks}`;
     fetch(url)
         .then(res => res.json())
         .then(data => getBooks(data.docs))
@@ -43,9 +43,9 @@ const getBooks = getBook => {
                    <img class="img-fluid" src="https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg" alt="">
                         <h5 class="card-title mt-3">Book Name: ${book.title}</h5>
                         <p class="card-text">Author Name: ${book.author_name}</p>
-                        <p>Publish Date: <b>${book.first_publish_year}</b></p>
+                        <p>Publish Year: <b>${book.first_publish_year}</b></p>
                         <p>language: ${book.language}</p>
-                        <p>Publisher: ${book.publisher}</p>
+                        <p>Publisher: ${book.publisher.slice(0, 3)}</p>
                         <p>Publis-Place: ${book.publish_place}</p>
                 </div>
             </div>
