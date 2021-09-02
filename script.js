@@ -45,7 +45,7 @@ const getBooks = getBook => {
                         <p class="card-text">Author Name: ${book.author_name}</p>
                         <p>Publish Year: <b>${book.first_publish_year}</b></p>
                         <p>language: ${book.language}</p>
-                        <p>Publisher: ${book.publisher.slice(0, 3)}</p>
+                        <p>Publisher: ${book.publisher}</p>
                         <p>Publis-Place: ${book.publish_place}</p>
                 </div>
             </div>
