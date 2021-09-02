@@ -35,7 +35,6 @@ const getBooks = getBook => {
     }
     // Get your books
     getBook.forEach(book => {
-        console.log(book)
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
