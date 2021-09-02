@@ -34,25 +34,26 @@ const getBooks = getBook => {
         notFound.appendChild(notFoundDiv);
     }
     // Get your books
-    getBook.forEach(book => {
+    getBook.slice(0, 40).forEach(book => {
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
-            <div id = "books" class="card h-100" >
-                <div class="card-body">
-                   <img class="img-fluid" src="https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg" alt="">
-                        <h5 class="card-title mt-3">Book Name: ${book.title}</h5>
-                        <p class="card-text">Author Name: ${book.author_name}</p>
-                        <p>Publish Year: <b>${book.first_publish_year}</b></p>
-                        <p>language: ${book.language}</p>
-                        <p>Publisher: ${book.publisher}</p>
-                        <p>Publis-Place: ${book.publish_place}</p>
+                <div id = "books" class="card h-100" >
+                <img class="img-fluid" src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" alt="">
+                    <div class="card-body">
+                            <h5 class="card-title mt-3">Book Name: ${book.title}</h5>
+                            <p class="card-text">Author Name: ${book.author_name}</p>
+                            <p>Publish Year: <b>${book.first_publish_year}</b></p>
+                            <p>language: ${book.language}</p>
+                            <p>Publisher: ${book.publisher}</p>
+                            <p>Publis-Place: ${book.publish_place}</p>
+                    </div>
                 </div>
-            </div>
-
-        `
+    
+            `
         searchBooks.appendChild(div);
     });
+
 }
 
 
